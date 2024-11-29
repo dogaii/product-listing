@@ -1,38 +1,126 @@
-.App {
+/* General Settings */
+body {
+  background-color: #f9f9f9;
+  font-family: "Avenir", "Montserrat", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.product-list {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Slick Dots */
+.slick-dots {
+  bottom: -25px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.slick-dots li button:before {
+  font-size: 12px;
+  color: #bbb;
+  opacity: 0.7;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.slick-dots li.slick-active button:before {
+  color: #333;
+  opacity: 1;
+}
+
+/* Slick Arrows */
+.slick-arrow {
+  display: block !important;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+  font-size: 30px;
+  color: black;
+  opacity: 0.7;
+  cursor: pointer;
+  user-select: none;
+}
+
+.slick-arrow:hover {
+  opacity: 1;
+}
+
+.slick-prev {
+  left: -40px; /* Arrow left position */
+}
+
+.slick-next {
+  right: -40px; /* Arrow right position */
+}
+
+/* Product Item */
+.product-item {
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  margin: 0 20px; /* Kartlar arasındaki marjin artırıldı */
+}
+
+.product-item h2 {
+  font-size: 1.3rem;
+  color: #333;
+  margin-bottom: 10px;
+  font-family: "Avenir", sans-serif; /* Avenir font for titles */
+}
+
+.product-item p {
+  font-size: 1rem;
+  color: #666;
+  margin: 5px 0;
+  font-family: "Montserrat", sans-serif; /* Montserrat font for details */
+}
+
+.product-image {
+  width: 100%;
+  max-width: 180px;
+  height: 180px;
+  object-fit: contain;
+  margin: 10px auto;
+}
+
+/* Color Options */
+.color-options {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: 8px;
+  margin-top: 15px;
 }
 
-.App-link {
-  color: #61dafb;
+.color-circle {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: border 0.3s ease, transform 0.3s ease;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.color-circle.yellow {
+  background-color: #e6ca97;
+}
+
+.color-circle.rose {
+  background-color: #e1a4a9;
+}
+
+.color-circle.white {
+  background-color: #d9d9d9;
+}
+
+.color-circle:hover {
+  transform: scale(1.1);
+}
+
+.color-circle.active {
+  border-color: #000; /* Active color border */
 }
