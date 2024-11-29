@@ -21,9 +21,9 @@ try {
 // Fetch gold price dynamically
 async function getGoldPrice() {
     try {
-      const response = await axios.get('https://www.goldapi.io/api/XAU/USD', {
+      const response = await axios.get('https://api.api-ninjas.com/v1/goldprice', {
         headers: {
-          'x-access-token': 'goldapi-1e7psm41nw7hh-io', // API anahtarınızı kontrol edin
+            'X-Api-Key': 'Fx8SXvw+gfXQ5vvCU2d+7w==pSBifLoCYJRV9OGi', // API 
           'Content-Type': 'application/json',
         },
       });
